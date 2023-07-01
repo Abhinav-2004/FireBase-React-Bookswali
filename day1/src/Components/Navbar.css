@@ -1,0 +1,47 @@
+nav{
+    display:flex;
+    justify-content: flex-end;
+    width:100%;
+    background-color: rgb(53, 234, 56);
+    align-items: center;
+}
+
+nav button{
+    margin:5px;
+    background-color:rgb(53, 234, 56); 
+    border:none;
+    color:black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.cart-btn{
+    display:flex;
+    align-items: center;
+    padding:10px;
+}
+.cart-btn img{
+    width: 30px;
+    height:fit-content;
+    
+}
+.cart-icon-css{
+    background-color: rgb(53, 234, 56);
+    width:10px;
+    height:30px;
+    display:flex;
+    align-items: center;
+    border-radius:30px;
+    position:relative;
+    top:3px;
+    right:8px;
+    color:black;
+    cursor: pointer;
+}
+
+.profile-icon{
+    width:30px;
+    padding-right:20px;
+    cursor: pointer;
+}
