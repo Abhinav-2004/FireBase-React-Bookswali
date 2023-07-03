@@ -1,20 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 nav{
     display:flex;
     justify-content: flex-end;
     width:100%;
-    background-color: rgb(53, 234, 56);
     align-items: center;
+    padding-inline-end: 30px;
+    
 }
 
 nav button{
     margin:5px;
-    background-color:rgb(53, 234, 56); 
     border:none;
     color:black;
     cursor: pointer;
     font-weight: bold;
-}
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    font-family: 'Secular One', sans-serif;
 
+}
+.navbar{
+    display: flex;
+    background-color: rgba(137, 43, 226, 0.71);
+}
+.left-container img{
+    width: 200px;
+    padding-left: 30px;
+}
 
 .cart-btn{
     display:flex;
@@ -27,7 +39,7 @@ nav button{
     
 }
 .cart-icon-css{
-    background-color: rgb(53, 234, 56);
+    font-family: 'Secular One', sans-serif;
     width:10px;
     height:30px;
     display:flex;
@@ -35,13 +47,13 @@ nav button{
     border-radius:30px;
     position:relative;
     top:3px;
-    right:8px;
+    right:4px;
     color:black;
     cursor: pointer;
 }
 
 .profile-icon{
-    width:30px;
-    padding-right:20px;
+    width:40px;
+    padding-right:15px;
     cursor: pointer;
 }
