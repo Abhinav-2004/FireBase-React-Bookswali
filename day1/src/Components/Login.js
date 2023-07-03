@@ -22,7 +22,7 @@ const Login = () => {
         setTimeout(()=>{
             setSuccessMsg('');
             navigate('/home');
-        },3000);
+        },2000);
      })
      .catch((error)=>{
       if(error.message ==='Firebase: Error (auth/invalid-email).'){

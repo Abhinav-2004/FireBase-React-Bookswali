@@ -6,6 +6,7 @@ import Login from './Components/Login';
 import PgFOF from './Components/pgFOF';
 import Cart from './Components/Cart';
 import UserProfile from './Components/UserProfile';
+import AddProduct from './Components/AddProduct';
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
         <Route exact path='/login' element={<Login/>}/>
         <Route exact path='/cart' element={<Cart/>}/>
         <Route exact path='/userprofile' element={<UserProfile/>}/>
+        <Route exact path='/sellproduct' element={<AddProduct/>}/>
         <Route path='*' element={<PgFOF />}/>
       </Routes>
     </BrowserRouter>

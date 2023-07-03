@@ -45,6 +45,7 @@ const Navbar = () => {
         <img src={appLogo}/>
       </div>
       </Link>
+      
       <div className='right-container'>
         {!loggedUser && <nav>
           <Link to = '/'><button>Home</button></Link>
@@ -62,6 +63,8 @@ const Navbar = () => {
           {loggedUser &&
           <nav>
             <Link to = '/'><button>Home</button></Link>
+            <Link to = '/sellproduct'><button>Sell</button></Link>
+
             <Link to ='/cart'>
             <div className='cart-btn'>
               <img src = {Cartlogo} alt = 'no logo'/>
