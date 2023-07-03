@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "./Banner.css";
 import slide1 from './assets/banner1.png';
 import slide2 from './assets/banner2.png';
 import slide3 from './assets/banner3.png';
@@ -10,7 +10,7 @@ const Banner = () => {
 
   
     return (
-    <div >
+    <div className="carasouel">
     <Carousel>
       <Carousel.Item>
         <img

@@ -50,6 +50,7 @@ nav button{
     right:4px;
     color:black;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .profile-icon{

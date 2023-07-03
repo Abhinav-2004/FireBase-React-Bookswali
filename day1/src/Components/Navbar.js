@@ -40,9 +40,11 @@ const Navbar = () => {
   }
   return (
     <div className='navbar'>
+      <Link to='/home'>
       <div className='left-container'>
         <img src={appLogo}/>
       </div>
+      </Link>
       <div className='right-container'>
         {!loggedUser && <nav>
           <Link to = '/'><button>Home</button></Link>
@@ -60,10 +62,12 @@ const Navbar = () => {
           {loggedUser &&
           <nav>
             <Link to = '/'><button>Home</button></Link>
+            <Link to ='/cart'>
             <div className='cart-btn'>
               <img src = {Cartlogo} alt = 'no logo'/>
               <span className='cart-icon-css'>{loggedUser[0].cart}</span>
             </div>
+            </Link>
             <Link to = '/userprofile'>
               <img src ={Profilelogo} className='profile-icon'/>
             </Link>
