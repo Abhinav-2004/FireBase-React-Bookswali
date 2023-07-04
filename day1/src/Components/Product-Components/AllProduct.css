@@ -1,0 +1,19 @@
+.heading{
+    background-color: rgb(240,240,240);
+    height:100px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.heading p{
+    font-size: 50px;
+}
+
+.allproductcontainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px
+}

@@ -39,7 +39,8 @@ const Navbar = () => {
     })
   }
   return (
-    <div className='navbar'>
+    <div>
+      <div className='navbar'>
       <Link to='/home'>
       <div className='left-container'>
         <img src={appLogo}/>
@@ -81,6 +82,13 @@ const Navbar = () => {
           }
       </div>
         
+    </div>
+    <div className='product-types'>
+      <a href='/product-type/mobiles'><button>Mobiles</button></a>
+      <a href ='/product-type/appliances'><button>Appliances</button></a>
+      <a href='/product-type/clothes'><button>Clothes</button></a>
+      <a href='/product-type/shoes'><button>Shoes</button></a>
+    </div>
     </div>
   )
 }

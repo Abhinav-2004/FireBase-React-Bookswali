@@ -141,3 +141,4 @@ const AddProduct = () => {
 }
 
 export default AddProduct
+//Add 10 products of 4 categories - Shoe,mobile,clothes,appliance by filling add product form and verify whether stored uin database or not.
