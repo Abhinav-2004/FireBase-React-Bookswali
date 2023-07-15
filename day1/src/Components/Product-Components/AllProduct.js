@@ -31,12 +31,12 @@ const productsArray = [];
           setProducts(productsArray);
           //console.log('done');
           //console.log(products_var);
-          
+          return productsArray;
         }).catch((error) => {
           console.log(error.message);
         });
     }
-    getProducts()
+    const Array = getProducts();
     
   }, []);
   console.log(products);
