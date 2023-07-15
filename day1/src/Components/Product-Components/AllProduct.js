@@ -16,19 +16,21 @@ import { db } from "../../FirebaseConfig/FirebaseConfig";
 const AllProduct = (props) => {
   //console.log(props.type);
 const [products, setProducts] =  useState([]);
+const productsArray = [];
   useEffect(() => {
     const getProducts=()=>{
-    const productsArray = [];
+    
     const path = `products-${props.type.toUpperCase()}`
       getDocs(collection(db, path))
         .then((querySnapshot)=>{
           querySnapshot.forEach((doc) => {
             productsArray.push({...doc.data(), id:doc.id });
           })
-          console.log(productsArray);
+          //console.log(productsArray);
+          //setProducts(productsArray);
           setProducts(productsArray);
-          console.log('done');
-          console.log(products);
+          //console.log('done');
+          //console.log(products_var);
           
         }).catch((error) => {
           console.log(error.message);
@@ -37,7 +39,7 @@ const [products, setProducts] =  useState([]);
     getProducts()
     
   }, []);
-
+  console.log(products);
   return (
     <div>
       <Navbar />
@@ -46,11 +48,14 @@ const [products, setProducts] =  useState([]);
       </div>
 
       <div className="allproductcontainer">
-        {products.map((product)=>{
+        
+        {products.map((element)=>{
+            return(
           <ProductContainer
-            key={product.id}
-            product={product}
+            key={element.id}
+            product={element}
           />
+          );
         })}
       </div>
     </div>
