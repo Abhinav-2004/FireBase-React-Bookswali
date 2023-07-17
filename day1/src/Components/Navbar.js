@@ -5,7 +5,7 @@ import Cartlogo from './assets/cartlogo.png';
 import Profilelogo from './assets/profilelogo.png';
 import appLogo from './assets/Booklogo.png';
 import { auth,db } from '../FirebaseConfig/FirebaseConfig';
-import {collection,getDocs,query,where} from 'firebase/firestore';
+import {QuerySnapshot, collection,getDocs,query,where} from 'firebase/firestore';
 import { useEffect,useState } from 'react';
 const Navbar = () => {
   function GetCurrentUser() {
@@ -38,6 +38,23 @@ const Navbar = () => {
       navigate('/login');
     })
   }
+
+  const [cartdata,setCartdata] = useState([]);
+  if(loggedUser){
+    const getcartdata=async()=>{
+      const cartArray=[];
+      const path=`cart-${loggedUser[0].uid}`;
+      getDocs(collection(db, path)).then((querySnapshot)=>{
+        querySnapshot.forEach((doc)=>{
+          cartArray.push({...doc.data(), id:doc.id})
+        });
+        setCartdata(cartArray);
+        //console.log(cartArray);
+      }).catch("Error Error Error");
+    }
+    getcartdata()
+  }
+
   return (
     <div>
       <div className='navbar'>
@@ -53,8 +70,12 @@ const Navbar = () => {
           <Link to = '/signup'><button>Register</button></Link>
           <Link to = '/login'><button>Login</button></Link>
           <div className='cart-btn'>
-            <img src = {Cartlogo} alt ='no img'/>
-            <span className='cart-icon-css'>0</span>
+            <Link to="/cartdata">
+            <img src = {Cartlogo} alt ='no img'/></Link>
+              <button className='cart-icon-css'>
+              0
+            </button>
+            
           </div>
           <Link to = '/userprofile'>
             <img src ={Profilelogo} className='profile-icon'/>
@@ -69,7 +90,7 @@ const Navbar = () => {
             <Link to ='/cart'>
             <div className='cart-btn'>
               <img src = {Cartlogo} alt = 'no logo'/>
-              <span className='cart-icon-css'>{loggedUser[0].cart}</span>
+              <span className='cart-icon-css'>{cartdata.length}</span>
             </div>
             </Link>
             <Link to = '/userprofile'>

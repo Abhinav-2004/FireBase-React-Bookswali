@@ -1,10 +1,38 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar";
-import Products from "./Products";
+import React , {useState, useEffect,props} from 'react';
+import "./Home.css";
+import Navbar from './Navbar';
 import Banner from "./Banner";
-import { auth, db } from "../FirebaseConfig/FirebaseConfig";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import {auth,db} from "../FirebaseConfig/FirebaseConfig";
+import {collection,getDocs,query,where} from 'firebase/firestore';
+import ProductSlider from './Product-Components/ProductSlider';
+
 const Home = () => {
+ /* const [products, setProducts] =  useState([]);
+    const productsArray = [];
+    useEffect(() => {
+    const getProducts=()=>{
+    
+    const path = `products-${props.type.toUpperCase()}`
+      getDocs(collection(db, path))
+        .then((querySnapshot)=>{
+          querySnapshot.forEach((doc) => {
+            productsArray.push({...doc.data(), id:doc.id });
+          })
+          //console.log(productsArray);
+          //setProducts(productsArray);
+          setProducts(productsArray);
+          //console.log('done');
+          //console.log(products_var);
+          return productsArray;
+        }).catch((error) => {
+          console.log(error.message);
+        });
+    }
+    const Array = getProducts();
+    
+  }, []);
+  console.log(products);
+  */
   function GetCurrentUser() {
     const [user, setUser] = useState("");
     const userCollectionRef = collection(db, "users");
@@ -33,8 +61,13 @@ const Home = () => {
     <div>
       <Navbar />
       <Banner />
-      <Products />
-      <p>{loggedUser?loggedUser[0].email:"User not found"}</p>
+      <div className='slider-head'>
+        Limited Time Deals
+      </div>
+      <ProductSlider type={'Mobiles'} />
+      <ProductSlider type={'Appliances'} />
+      <ProductSlider type={'Clothes'} />
+      <ProductSlider type={'Shoes'} />
     </div>
   );
 };

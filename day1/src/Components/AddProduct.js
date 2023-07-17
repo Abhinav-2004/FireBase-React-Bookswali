@@ -15,7 +15,7 @@ const AddProduct = () => {
     const[price, setPrice]=useState('');
     const[warranty, setWarranty]=useState('');
     const[productimage, setProductimage]=useState('');
-    
+    const[keyspecs, setKeyspecs]=useState('');
     const[imageError, setImageError]=useState('');
     const[successMsg, setSuccessMsg]=useState('');
     const[uploadError, setUploadError]=useState('');
@@ -76,7 +76,8 @@ const AddProduct = () => {
                 customersupport,
                 price,
                 warranty,
-                productimage:url
+                productimage:url,
+                keyspecs:keyspecs
                 })
             })
         })
@@ -117,6 +118,10 @@ const AddProduct = () => {
                 <div className='error-msg'>
                     {imageError}
                 </div>}
+                <label>Key Specifications</label>
+                <input type= "text"
+                onChange={(e)=>{setKeyspecs(e.target.value)}}/>
+
                 <label>Description</label>
                 <input type= "text"
                 onChange={(e)=>{setDescription(e.target.value)}}/>

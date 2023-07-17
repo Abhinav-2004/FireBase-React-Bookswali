@@ -8,6 +8,7 @@ import Cart from './Components/Cart';
 import UserProfile from './Components/UserProfile';
 import AddProduct from './Components/AddProduct';
 import AllProduct from './Components/Product-Components/AllProduct';
+import SpecificProductPage from './Components/Product-Components/SpecificProductPage';
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +24,8 @@ function App() {
         <Route exact path='/product-type/appliances' element={<AllProduct type={'Appliances'}/>}/>
         <Route exact path='/product-type/clothes' element={<AllProduct type={'Clothes'}/>}/>
         <Route exact path='/product-type/shoes' element={<AllProduct type={'Shoes'}/>}/>
+
+        <Route path='/product/:type/:id/' element={<SpecificProductPage/>}/>
         <Route path='*' element={<PgFOF />}/>
       </Routes>
     </BrowserRouter>
