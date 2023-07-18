@@ -1,0 +1,44 @@
+.cart-head{
+    display: flex;
+    justify-content: center;
+    
+    margin: 20px;
+    
+    padding: 20px;
+    font-size: 40px;
+    
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.empty-cart{
+    display: flex;
+    justify-content: center;
+    
+    margin: 20px;
+    
+    padding: 20px;
+    font-size: 20px;
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.proceed{
+    display:flex;
+    justify-content: center;
+
+}
+
+.proceed button{
+    background-color: white;
+    color:rgba(137, 43, 226, 0.71);
+    font-weight:600;
+    padding:5px;
+    margin-top:20px;
+    margin-bottom: 10px;
+    border:2px solid rgba(137, 43, 226, 0.71);
+    border-radius: 10px;
+}
+.proceed button:hover{
+    background-color: rgba(0, 0, 0, 0.642);
+    color:white;
+}

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+.not-approved{
+    display:flex;
+    justify-content: center;
+    margin-top:100px;
+    font-family: 'Secular One', sans-serif;
+}
+.add-product-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom:50px;
+    
+}
+.add-product-form{
+    justify-items: center;
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+    border:1px solid rgb(228, 111, 111);
+    border-radius:20px;
+    width:800px;
+    background-color: rgba(192, 218, 241, 0.231);
+}
+.add-product-form h1{
+    font-size:30px;
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+}
+
+.add-product-form label{
+    padding:0px;
+    margin-top:16px;
+    font-weight:700;
+    font-size:16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.add-product-form input{
+    margin:2px 0px;
+    padding:5px;
+    border:2px solid rgb(154,154,154);
+    border-radius: 10px;
+    font-size:18px;
+}
+
+.add-product-form button{
+    background-color: rgba(90, 114, 236, 0.753);
+    margin:20px 0px;
+    border:none;
+    font-size:20px;
+    color:white;
+    font-weight:600;
+    border-radius:10px;
+    padding:5px;
+}
+.add-product-form button:hover{
+    background-color: rgba(0, 0, 0, 0.283);
+    color:white;
+    cursor:pointer;
+}
+.success-msg{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    background-color: rgb(229,255,228);
+    border-radius: 10px;
+    color: green;
+}
+.error-msg{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    background-color: rgb(229,255,228);
+    border-radius: 10px;
+    color: red;
+}

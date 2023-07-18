@@ -1,0 +1,8 @@
+.slider-head{
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+    font-size:30px;
+    font-weight: bolder;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
